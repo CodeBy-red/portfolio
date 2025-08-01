@@ -3,107 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red.Dev - Desenvolvedor Júnior</title>
+    <title>Red.Dev // Desenvolvedor Criativo</title>
     
-    <link rel="stylesheet" href="Style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
     
+    <!-- Novas Fontes para o Estilo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <nav>
+    <!-- Cursor customizado que seguirá o mouse -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Tela de Carregamento para um início impactante -->
+    <div class="preloader">
+        <div class="loader-text">Red.Dev // 2024</div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <header>
             <div class="logo">
                 <a href="#">&lt;Red /&gt;</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Olá, eu sou <span class="highlight">Gabriel</span></h1>
-                <p class="subtitle">Desenvolvedor focado em Automação e Soluções Web.</p>
-                <a href="#projetos" class="cta-button">Ver Meus Projetos</a>
+            <div class="contact-link">
+                <a href="#contato">Vamos Conversar</a>
             </div>
-        </section>
+        </header>
 
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <div class="sobre-content">
-                <p>
-                    Desenvolvedor júnior com 5 meses de experiência prática na criação de soluções de automação que otimizam processos internos. Em minha atuação, identifiquei oportunidades e desenvolvi proativamente duas ferramentas de alto impacto: um chatbot para automatizar o suporte e um dashboard dinâmico para visualização de dados.
+        <main>
+            <!-- Seção Hero com animação de entrada -->
+            <section id="hero">
+                <h1 class="hero-title">
+                    <span class="line">Gabriel Lima</span>
+                    <span class="line">Developer</span>
+                </h1>
+                <p class="hero-subtitle">Transformando ideias em experiências digitais fluidas.</p>
+            </section>
+
+            <!-- Seção Sobre mais concisa e direta -->
+            <section id="about">
+                <p class="about-text">
+                    Com 5 meses de experiência, meu foco é criar soluções de automação de alto impacto. Desenvolvi um <strong>chatbot de suporte</strong> e um <strong>dashboard dinâmico</strong> que otimizaram radicalmente os processos internos. Minha paixão é usar <strong>HTML, CSS e JavaScript</strong> para construir ferramentas intuitivas, enquanto expando minhas habilidades com <strong>Python</strong>.
                 </p>
-                <p>
-                    Sou proficiente em <strong>HTML, CSS e JavaScript</strong>, e estou aprofundando meus conhecimentos em <strong>Python</strong> para construir aplicações ainda mais robustas e inteligentes. Busco continuamente oportunidades para aprender, colaborar e construir soluções que façam a diferença.
-                </p>
-                <div class="skills">
-                    <h3>Habilidades Técnicas:</h3>
-                    <div class="skill-icons">
-                        <i class="fab fa-html5" title="HTML5"></i>
-                        <i class="fab fa-css3-alt" title="CSS3"></i>
-                        <i class="fab fa-js-square" title="JavaScript"></i>
-                        <i class="fab fa-python" title="Python (Aprendendo)"></i>
-                        <i class="fab fa-git-alt" title="Git"></i>
+            </section>
+
+            <!-- Seção de Projetos com Rolagem Horizontal -->
+            <section id="projects-container">
+                <div class="projects-title-wrapper">
+                    <h2>Projetos Selecionados</h2>
+                </div>
+                <div class="projects-wrapper">
+                    <!-- Card de Projeto 1 -->
+                    <div class="project-card" data-img="img/projeto1.jpg">
+                        <div class="project-info">
+                            <h3>01.</h3>
+                            <h3>Chatbot de Atendimento</h3>
+                            <p>Solução de automação para responder a perguntas repetitivas e liberar a equipe de suporte para tarefas estratégicas.</p>
+                        </div>
+                    </div>
+                    <!-- Card de Projeto 2 -->
+                    <div class="project-card" data-img="img/projeto2.jpg">
+                        <div class="project-info">
+                            <h3>02.</h3>
+                            <h3>Dashboard de Métricas</h3>
+                            <p>Painel web com atualizações em tempo real para fornecer visibilidade instantânea dos KPIs e agilizar a tomada de decisões.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="projetos">
-            <h2>Projetos em Destaque</h2>
-            <div class="projetos-grid">
-                <div class="projeto-card">
-                    <h3>Chatbot de Atendimento Interno</h3>
-                    <p class="projeto-descricao">
-                        <strong>O Problema:</strong> A equipe de suporte gastava tempo considerável respondendo a perguntas repetitivas dos colaboradores.
-                    </p>
-                    <p class="projeto-descricao">
-                        <strong>A Solução:</strong> Desenvolvi um chatbot com HTML, CSS e JS, integrado à plataforma de comunicação interna, fornecendo respostas instantâneas e padronizadas 24/7.
-                    </p>
-                    <p class="projeto-impacto">
-                        <strong>Impacto:</strong> Redução no volume de chamados e maior autonomia para os colaboradores.
-                    </p>
+            <!-- Seção de Contato com links diretos -->
+            <section id="contato">
+                <h2>Disponível para<br>novos projetos</h2>
+                <p>Vamos criar algo incrível juntos.</p>
+                <a href="mailto:Gl451606@gmail.com" class="email-link">E-mail</a>
+                <div class="social-links">
+                    <!-- ATENÇÃO: Corrija o link do seu GitHub aqui -->
+                    <a href="https://github.com/CodeBy-red" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/gabriel-lima-de-araujo-463bb923b/" target="_blank">LinkedIn</a>
                 </div>
-                <div class="projeto-card">
-                    <h3>Dashboard de Métricas em Tempo Real</h3>
-                    <p class="projeto-descricao">
-                        <strong>O Problema:</strong> Dados cruciais para a tomada de decisão estavam dispersos em várias planilhas, exigindo compilação manual.
-                    </p>
-                    <p class="projeto-descricao">
-                        <strong>A Solução:</strong> Construí um painel web que centraliza e exibe dados de forma visual, com atualizações automáticas via JavaScript.
-                    </p>
-                    <p class="projeto-impacto">
-                        <strong>Impacto:</strong> Visibilidade instantânea dos KPIs e eliminação de relatórios manuais, agilizando as decisões.
-                    </p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
+    </div>
 
-        <section id="contato">
-            <h2>Vamos nos Conectar!</h2>
-            <p>Estou aberto a novas oportunidades e desafios. Se você acredita que posso agregar valor à sua equipe, entre em contato.</p>
-            <div class="social-links">
-                <a href="mailto:Gl451606@gmail.com" target="_blank"><i class="fas fa-envelope"></i> E-mail</a>
-                <a href="https://linkedin.com/in/Gabriel Lima de Araujo" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.linkedin.com/in/gabriel-lima-de-araujo-463bb923b/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BwtGriDS4TcGjG%2Bx%2B9iBZiQ%3D%3D" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 - Gabriel. Desenvolvido com <i class="fas fa-heart"></i> e código.</p>
-    </footer>
-
-    <script src="Script.js"></script>
+    <!-- Biblioteca de Animação GSAP (essencial para as animações) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Seu arquivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
