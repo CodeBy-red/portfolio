@@ -1,0 +1,273 @@
+/* --- Reset Básico e Variáveis de Cor --- */
+:root {
+    --cor-primaria: #0a0a0a; /* Preto quase puro */
+    --cor-secundaria: #1a1a1a; /* Cinza bem escuro */
+    --cor-destaque: #007bff; /* Azul vibrante */
+    --cor-texto: #f0f0f0; /* Branco suave */
+    --cor-texto-secundario: #a0a0a0; /* Cinza claro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+/* --- Estilos Gerais --- */
+section {
+    padding: 100px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--cor-destaque);
+}
+
+/* --- Header e Navegação --- */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cor-destaque);
+}
+
+/* --- Seção Hero (Apresentação) --- */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--cor-destaque);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--cor-texto-secundario);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Seção Sobre --- */
+#sobre {
+    background-color: var(--cor-secundaria);
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
+.skills {
+    margin-top: 40px;
+}
+
+.skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.skill-icons i {
+    font-size: 3rem;
+    margin: 0 15px;
+    color: var(--cor-texto);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-icons i:hover {
+    color: var(--cor-destaque);
+    transform: scale(1.2);
+}
+
+/* --- Seção Projetos --- */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card {
+    background-color: var(--cor-secundaria);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--cor-destaque);
+}
+
+.projeto-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-destaque);
+}
+
+.projeto-card p {
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.projeto-impacto {
+    font-style: italic;
+    margin-top: 15px;
+    color: var(--cor-texto) !important;
+}
+
+/* --- Seção Contato --- */
+#contato {
+    text-align: center;
+}
+
+#contato p {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+}
+
+.social-links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--cor-destaque);
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+footer .fa-heart {
+    color: var(--cor-destaque);
+}
+
+/* --- Animações e Responsividade --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simplificar para um menu hamburguer se necessário */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+}
